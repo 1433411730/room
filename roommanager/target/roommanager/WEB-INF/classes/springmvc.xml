@@ -38,9 +38,9 @@
         <!--配置拦截器-->
         <mvc:interceptor>
             <!--要拦截的请求-->
-            <mvc:mapping path="/manager"/>
-            <!--&lt;!&ndash;不拦截的请求&ndash;&gt;-->
-            <!--<mvc:exclude-mapping path="/index.jsp"/>-->
+            <mvc:mapping path="/manager/*"/>
+            <!--不拦截的请求-->
+            <mvc:exclude-mapping path="/manager/login"/>
             <bean  class="com.ssw.utils.MyInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
@@ -50,6 +50,12 @@
     <mvc:resources location="/images/" mapping="/images/**"></mvc:resources>
     <mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
     <mvc:resources location="/fonts/" mapping="/fonts/**"></mvc:resources>
+
+    <mvc:resources location="/managerpages/css/" mapping="/managerpages/css/**"></mvc:resources>
+    <mvc:resources location="/managerpages/images/" mapping="/managerpages/images/**"></mvc:resources>
+    <mvc:resources location="/managerpages/js/" mapping="/managerpages/js/**"></mvc:resources>
+    <mvc:resources location="/managerpages/fonts/" mapping="/managerpages/fonts/**"></mvc:resources>
+    <mvc:resources location="/managerpages/vendor/" mapping="/managerpages/vendor/**"></mvc:resources>
 
     <!--注解mvc-->
     <mvc:annotation-driven conversion-service="conversionService2"/>

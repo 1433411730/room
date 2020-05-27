@@ -51,6 +51,12 @@
     <mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
     <mvc:resources location="/fonts/" mapping="/fonts/**"></mvc:resources>
 
+    <mvc:resources location="/managerpages/css/" mapping="/managerpages/css/**"></mvc:resources>
+    <mvc:resources location="/managerpages/images/" mapping="/managerpages/images/**"></mvc:resources>
+    <mvc:resources location="/managerpages/js/" mapping="/managerpages/js/**"></mvc:resources>
+    <mvc:resources location="/managerpages/fonts/" mapping="/managerpages/fonts/**"></mvc:resources>
+    <mvc:resources location="/managerpages/vendor/" mapping="/managerpages/vendor/**"></mvc:resources>
+
     <!--注解mvc-->
     <mvc:annotation-driven conversion-service="conversionService2"/>
 </beans>

@@ -4,16 +4,11 @@ import com.ssw.entity.User;
 import com.ssw.exception.SysException;
 import com.ssw.service.UserService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
-import java.io.PrintWriter;
-import java.util.List;
-import java.util.logging.Logger;
 
 @Controller("userController")
 @RequestMapping("/user")
@@ -73,5 +68,11 @@ public class UserController {
           System.out.println(users);
 
         return "success";
+    }
+//   跳转后台登录
+    @RequestMapping("/loginpage")
+    public String managerPage(){
+
+        return "login";
     }
 }
